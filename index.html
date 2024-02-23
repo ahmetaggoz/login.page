@@ -8,16 +8,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="app.js" defer></script>
     <title>Login Page</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
+        <span class="menu-btn material-symbols-rounded">menu</span>
         <a href="#" class="logo">
           <img src="images/logo.jpg" alt="logo" />
           <h2>CodingNepal</h2>
         </a>
         <ul class="links">
+          <span class="close-btn material-symbols-rounded">close</span>
           <li><a href="#">Home</a></li>
           <li><a href="#">Portfolio</a></li>
           <li><a href="#">Courses</a></li>
@@ -27,9 +30,10 @@
         <button class="login-btn">LOG IN</button>
       </nav>
     </header>
+    <div class="blur-bg-overlay"></div>
     <div class="form-popup">
       <span class="close-btn material-symbols-rounded">close</span>
-      <div class="form-box">
+      <div class="form-box login">
         <div class="form-details">
           <h2>Welcome Back</h2>
           <p>Lütfen giriş yapmak için üye olun.</p>
@@ -50,7 +54,38 @@
           </form>
           <div class="bottom-link">
             Hesabınız Yok mu?
-            <a href="#">Sign Up</a>
+            <a href="#" id="signup-link">Sign Up</a>
+          </div>
+        </div>
+      </div>
+      <div class="form-box signup">
+        <div class="form-details">
+          <h2>Hesap Oluştur</h2>
+          <p>Topluluğumuza katılmak için lütfen bir hesap oluşturun.</p>
+        </div>
+        <div class="form-content">
+          <h2>SIGNUP</h2>
+          <form action="#">
+            <div class="input-field">
+              <input type="text" required="" />
+              <label>Email hesabınızı girin</label>
+            </div>
+            <div class="input-field">
+              <input type="password" required="" />
+              <label>Şifre oluştur</label>
+            </div>
+            <div class="policy-text">
+              <input type="checkbox" id="policy" />
+              <label for="policy"
+                >Kabul ediyorum
+                <a href="#">Koşulları ve Kuralları</a>
+              </label>
+            </div>
+            <button type="submit">Sıgn Up</button>
+          </form>
+          <div class="bottom-link">
+            Hesabınız var mı?
+            <a href="#" id="login-link">Giriş</a>
           </div>
         </div>
       </div>
